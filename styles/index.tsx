@@ -9,3 +9,9 @@ export const GlobalStyle = createGlobalStyle`
     background-color: #ec008c;
   }
 `;
+
+export const theme = {
+    colors: {
+        primary: '#0070f3',
+    },
+};
