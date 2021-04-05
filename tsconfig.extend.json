@@ -1,11 +1,25 @@
 {
-  "compilerOptions": {
-    "baseUrl": "./",
-    "paths": {
-      "@components": ["./components"],
-      "@components/*": ["./components/*"],
-      "@pages": ["./pages"],
-      "@pages/*": ["./pages/*"]
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@/assets": ["./assets"],
+            "@/assets/*": ["./assets/*"],
+            "@/context": ["./context"],
+            "@/context/*": ["./context/*"],
+            "@/hooks": ["./hooks"],
+            "@/hooks/*": ["./hooks/*"],
+            "@/ingredients": ["./components/ingredients"],
+            "@/ingredients/*": ["./components/ingredients/*"],
+            "@/recipes": ["./components/recipes"],
+            "@/recipes/*": ["./components/recipes/*"],
+            "@/templates": ["./components/templates"],
+            "@/templates/*": ["./components/templates/*"],
+            "@/pages": ["./pages"],
+            "@/pages/*": ["./pages/*"],
+            "@/styles": ["./styles"],
+            "@/styles/*": ["./styles/*"],
+            "@/types": ["./types"],
+            "@/types/*": ["./types/*"]
+        }
     }
-  }
 }
