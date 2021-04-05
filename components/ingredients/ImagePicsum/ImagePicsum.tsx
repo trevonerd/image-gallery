@@ -1,7 +1,7 @@
 import Image, { ImageLoaderProps } from 'next/image';
 
 const picsumLoader = ({ src, width }: ImageLoaderProps): string => {
-    width = width / 4; // to save bandwith!
+    width = width / 2; // to save bandwith!
     return `https://picsum.photos/id/${src}/${width}/${Math.round(
         width / 1.7
     )}`;
@@ -9,10 +9,10 @@ const picsumLoader = ({ src, width }: ImageLoaderProps): string => {
 
 export type ImagePicsumProps = {
     id: string;
-    author: string;
+    author?: string;
 };
 
-const ImagePicsum = ({ id, author }: ImagePicsumProps) => {
+const ImagePicsum: React.FC<ImagePicsumProps> = ({ id, author }) => {
     return (
         <Image
             loader={picsumLoader}
