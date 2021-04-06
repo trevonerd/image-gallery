@@ -8,6 +8,6 @@ export default {
     component: Loader,
 } as Meta;
 
-const Template: Story<Loader> = args => <Loader {...args} />;
+const Template: Story = args => <Loader {...args} />;
 
 export const Default = Template.bind({});

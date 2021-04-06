@@ -15,35 +15,35 @@ const Template: Story<TypographyProps> = args => <Typography {...args} />;
 
 export const SizeXs = Template.bind({});
 SizeXs.args = {
-    color: '#333',
+    color: 'grey',
     size: 'xs',
     children: 'Text Size XS',
 };
 
 export const SizeSm = Template.bind({});
 SizeSm.args = {
-    color: '#333',
+    color: 'grey',
     size: 'sm',
     children: 'Text Size SM',
 };
 
 export const SizeMd = Template.bind({});
 SizeMd.args = {
-    color: '#333',
+    color: 'grey',
     size: 'md',
     children: 'Text Size MD',
 };
 
 export const SizeLg = Template.bind({});
 SizeLg.args = {
-    color: '#333',
+    color: 'grey',
     size: 'lg',
     children: 'Text Size LG',
 };
 
 export const SizeXl = Template.bind({});
 SizeXl.args = {
-    color: '#333',
+    color: 'grey',
     size: 'xl',
     children: 'Text Size XL',
 };
@@ -51,6 +51,6 @@ SizeXl.args = {
 export const customElement = Template.bind({});
 customElement.args = {
     as: 'h1',
-    color: '#333',
+    color: 'grey',
     children: '<h1></h1>',
 };

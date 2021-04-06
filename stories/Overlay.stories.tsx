@@ -8,7 +8,7 @@ export default {
     component: Overlay,
 } as Meta;
 
-const Template: Story<Overlay> = args => <Overlay {...args} />;
+const Template: Story = args => <Overlay {...args} />;
 
 export const Dark = Template.bind({});
 Dark.args = {
