@@ -3,7 +3,6 @@
 exports[`Storyshots Ingredients/Typography Custom Element 1`] = `
 <h1
   className="a0crh9-0 gBygfC"
-  color="#333"
   size="md"
 >
   &lt;h1&gt;&lt;/h1&gt;
@@ -13,7 +12,6 @@ exports[`Storyshots Ingredients/Typography Custom Element 1`] = `
 exports[`Storyshots Ingredients/Typography Size Lg 1`] = `
 <span
   className="a0crh9-0 egQoYg"
-  color="#333"
   size="lg"
 >
   Text Size LG
@@ -23,7 +21,6 @@ exports[`Storyshots Ingredients/Typography Size Lg 1`] = `
 exports[`Storyshots Ingredients/Typography Size Md 1`] = `
 <span
   className="a0crh9-0 gBygfC"
-  color="#333"
   size="md"
 >
   Text Size MD
@@ -33,7 +30,6 @@ exports[`Storyshots Ingredients/Typography Size Md 1`] = `
 exports[`Storyshots Ingredients/Typography Size Sm 1`] = `
 <span
   className="a0crh9-0 jDRnqY"
-  color="#333"
   size="sm"
 >
   Text Size SM
@@ -42,8 +38,7 @@ exports[`Storyshots Ingredients/Typography Size Sm 1`] = `
 
 exports[`Storyshots Ingredients/Typography Size Xl 1`] = `
 <span
-  className="a0crh9-0 kTCHOX"
-  color="#333"
+  className="a0crh9-0 edjcoo"
   size="xl"
 >
   Text Size XL
@@ -53,7 +48,6 @@ exports[`Storyshots Ingredients/Typography Size Xl 1`] = `
 exports[`Storyshots Ingredients/Typography Size Xs 1`] = `
 <span
   className="a0crh9-0 iIXvhi"
-  color="#333"
   size="xs"
 >
   Text Size XS

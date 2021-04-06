@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export interface ButtonProps {
+export interface ButtonProps extends React.HTMLAttributes<HTMLElement> {
     children: React.ReactNode;
     disabled?: boolean;
 }
@@ -32,7 +32,15 @@ const ButtonPrimary = styled('button')<ButtonProps>`
     `}
 `;
 
-const Button: React.FC<ButtonProps> = ({ children, disabled = false }) => {
-    return <ButtonPrimary disabled={disabled}>{children}</ButtonPrimary>;
+const Button: React.FC<ButtonProps> = ({
+    children,
+    disabled = false,
+    onClick,
+}) => {
+    return (
+        <ButtonPrimary disabled={disabled} onClick={onClick}>
+            {children}
+        </ButtonPrimary>
+    );
 };
 export default Button;

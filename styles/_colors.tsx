@@ -3,6 +3,7 @@ export const colors = {
     disabled: '#CDCDCD',
     grey: '#333333',
     white: '#ffffff',
+    error: '#FF0000',
 };
 
 export type ColorName = keyof typeof colors;

@@ -3,7 +3,7 @@ export const fontSizes = {
     sm: '14px',
     md: '16px',
     lg: '18px',
-    xl: '24px',
+    xl: '32px',
 };
 
 export type FontSize = keyof typeof fontSizes;

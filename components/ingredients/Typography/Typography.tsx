@@ -20,13 +20,15 @@ export interface TypographyProps {
 const defaultProps: Partial<TypographyProps> = {
     as: 'span',
     size: 'md',
-    color: 'white',
+    color: 'primary',
 };
 
 const StyledTypography = styled(
-    ({ component: Component = defaultProps.as, ...props }) => (
-        <Component {...props} />
-    )
+    ({
+        component: Component = defaultProps.as,
+        color = defaultProps.color,
+        ...props
+    }) => <Component {...props} />
 )<TypographyProps>`
     font-size: ${({ size }: TypographyProps): FontSizeValues =>
         fontSizes[size!]};
