@@ -13,7 +13,7 @@ export type ImagePicsumProps = {
 };
 
 const ImagePicsum: React.FC<ImagePicsumProps> = ({ id, author }) => {
-    return (
+    return id ? (
         <Image
             loader={picsumLoader}
             src={id}
@@ -21,7 +21,7 @@ const ImagePicsum: React.FC<ImagePicsumProps> = ({ id, author }) => {
             layout="fill"
             objectFit="cover"
         />
-    );
+    ) : null;
 };
 
 export default ImagePicsum;
