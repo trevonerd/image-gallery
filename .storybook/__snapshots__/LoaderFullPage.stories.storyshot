@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Recipes/LoaderFullPage Default 1`] = `
+<div
+  className="sc-3ihsg8-0 gEEAzc"
+>
+  <div
+    className="ir2a4t-0 jerMGT"
+  />
+</div>
+`;

@@ -16,7 +16,7 @@ const StyledOverlay = styled('div')<OverlayProps>`
 `;
 
 export interface OverlayProps extends React.HTMLAttributes<HTMLElement> {
-    onClick: React.MouseEventHandler<HTMLDivElement>;
+    onClick?: React.MouseEventHandler<HTMLDivElement>;
     background?: 'dark' | 'light';
 }
 
