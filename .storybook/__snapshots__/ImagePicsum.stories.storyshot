@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Ingredients/ImagePicsum Default 1`] = `
+<div
+  style={
+    Object {
+      "height": "20vw",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "bottom": 0,
+        "boxSizing": "border-box",
+        "display": "block",
+        "left": 0,
+        "margin": 0,
+        "overflow": "hidden",
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <noscript>
+      <img
+        alt="author"
+        decoding="async"
+        src="1"
+        srcSet="https://picsum.photos/id/1/320/188 640w, https://picsum.photos/id/1/375/221 750w, https://picsum.photos/id/1/414/244 828w, https://picsum.photos/id/1/540/318 1080w, https://picsum.photos/id/1/600/353 1200w, https://picsum.photos/id/1/960/565 1920w, https://picsum.photos/id/1/1024/602 2048w, https://picsum.photos/id/1/1920/1129 3840w"
+        style={
+          Object {
+            "border": "none",
+            "bottom": 0,
+            "boxSizing": "border-box",
+            "display": "block",
+            "height": 0,
+            "left": 0,
+            "margin": "auto",
+            "maxHeight": "100%",
+            "maxWidth": "100%",
+            "minHeight": "100%",
+            "minWidth": "100%",
+            "objectFit": "cover",
+            "objectPosition": undefined,
+            "padding": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": 0,
+          }
+        }
+      />
+    </noscript>
+    <img
+      alt="author"
+      decoding="async"
+      src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+      style={
+        Object {
+          "border": "none",
+          "bottom": 0,
+          "boxSizing": "border-box",
+          "display": "block",
+          "height": 0,
+          "left": 0,
+          "margin": "auto",
+          "maxHeight": "100%",
+          "maxWidth": "100%",
+          "minHeight": "100%",
+          "minWidth": "100%",
+          "objectFit": "cover",
+          "objectPosition": undefined,
+          "padding": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "width": 0,
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Ingredients/ImagePicsum Empty 1`] = `
+<div
+  style={
+    Object {
+      "height": "20vw",
+    }
+  }
+/>
+`;

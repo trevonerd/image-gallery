@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Ingredients/Typography Custom Element 1`] = `
+<h1
+  className="a0crh9-0 gBygfC"
+  color="#333"
+  size="md"
+>
+  &lt;h1&gt;&lt;/h1&gt;
+</h1>
+`;
+
+exports[`Storyshots Ingredients/Typography Size Lg 1`] = `
+<span
+  className="a0crh9-0 egQoYg"
+  color="#333"
+  size="lg"
+>
+  Text Size LG
+</span>
+`;
+
+exports[`Storyshots Ingredients/Typography Size Md 1`] = `
+<span
+  className="a0crh9-0 gBygfC"
+  color="#333"
+  size="md"
+>
+  Text Size MD
+</span>
+`;
+
+exports[`Storyshots Ingredients/Typography Size Sm 1`] = `
+<span
+  className="a0crh9-0 jDRnqY"
+  color="#333"
+  size="sm"
+>
+  Text Size SM
+</span>
+`;
+
+exports[`Storyshots Ingredients/Typography Size Xl 1`] = `
+<span
+  className="a0crh9-0 kTCHOX"
+  color="#333"
+  size="xl"
+>
+  Text Size XL
+</span>
+`;
+
+exports[`Storyshots Ingredients/Typography Size Xs 1`] = `
+<span
+  className="a0crh9-0 iIXvhi"
+  color="#333"
+  size="xs"
+>
+  Text Size XS
+</span>
+`;

@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Ingredients/Overlay Dark 1`] = `
+<div
+  className="sc-1fqvz6m-0 boAAmG"
+/>
+`;
