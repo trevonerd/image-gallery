@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Recipes/Pagination First Page 1`] = `
+<div
+  className="sc-18p7qsi-0 iTHwfZ"
+>
+  <button
+    className="sc-1rup0b6-0 kapsQV"
+    disabled={true}
+    onClick={[Function]}
+  >
+    Previous Page
+  </button>
+  <div
+    className="sc-18p7qsi-1 ixdudx"
+  >
+    <span
+      className="fl50m3-0 ergmIu"
+      size="sm"
+    >
+      PAGE 
+      1
+    </span>
+  </div>
+  <button
+    className="sc-1rup0b6-0 kapsQV"
+    disabled={false}
+    onClick={[Function]}
+  >
+    Next Page
+  </button>
+</div>
+`;
+
+exports[`Storyshots Recipes/Pagination Other Pages 1`] = `
+<div
+  className="sc-18p7qsi-0 iTHwfZ"
+>
+  <button
+    className="sc-1rup0b6-0 kapsQV"
+    disabled={false}
+    onClick={[Function]}
+  >
+    Previous Page
+  </button>
+  <div
+    className="sc-18p7qsi-1 ixdudx"
+  >
+    <span
+      className="fl50m3-0 ergmIu"
+      size="sm"
+    >
+      PAGE 
+      2
+    </span>
+  </div>
+  <button
+    className="sc-1rup0b6-0 kapsQV"
+    disabled={false}
+    onClick={[Function]}
+  >
+    Next Page
+  </button>
+</div>
+`;

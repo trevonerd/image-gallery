@@ -19,7 +19,7 @@ const CurrentPage = styled('div')`
     align-self: center;
 `;
 
-const Pagination = () => {
+const Pagination: React.FC = () => {
     const { state, dispatch } = useContext(AppContext);
 
     return (

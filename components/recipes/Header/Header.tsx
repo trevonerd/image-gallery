@@ -11,7 +11,7 @@ const HeaderContainer = styled('div')`
     align-items: center;
 `;
 
-const Header = () => {
+const Header: React.FC = () => {
     return (
         <HeaderContainer>
             <Typography as="h1" size="xl">

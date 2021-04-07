@@ -25,7 +25,7 @@ const ImageGalleryThumb = styled('div')`
 `;
 
 const ImageGalleryContainer = styled('div')<ImageGalleryContainerProps>`
-    ${({ columns, picturesNumber, showAllPictures, theme }) => `
+    ${({ picturesNumber, showAllPictures, theme }) => `
     display: grid;
     grid-gap: 15px;
     grid-template-columns: repeat(1, 1fr);
@@ -39,28 +39,18 @@ const ImageGalleryContainer = styled('div')<ImageGalleryContainerProps>`
     @media (min-width: ${theme.breakpoints.sm + 1}px) and (max-width: ${
         theme.breakpoints.md
     }px) {
-        grid-template-columns: repeat(${columns ? Math.round(columns / 2) : 0},
-            1fr
-        );
+        grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(${
-            showAllPictures
-                ? columns
-                    ? Math.round(picturesNumber / (columns / 2)) + 1
-                    : 0
-                : 4
+            showAllPictures ? Math.round((picturesNumber + 3) / 2) : 4
         },
             28vw
         );
     }
 
     @media (min-width: ${theme.breakpoints.md + 1}px) {
-        grid-template-columns: repeat(${columns}, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(${
-            showAllPictures
-                ? columns
-                    ? Math.round(picturesNumber / columns + 1)
-                    : 0
-                : 2
+            showAllPictures ? Math.round((picturesNumber + 4) / 4) : 2
         },
             12vw
         );
@@ -101,7 +91,6 @@ const PhotoCameraIconContainer = styled('div')`
 `;
 
 export interface ImageGalleryProps {
-    columns?: number;
     showAllPictures?: boolean;
 }
 
@@ -109,16 +98,16 @@ export interface ImageGalleryContainerProps extends ImageGalleryProps {
     picturesNumber: number;
 }
 
-const ImageGallery: React.FC<ImageGalleryProps> = ({ columns = 4 }) => {
+const ImageGallery: React.FC<ImageGalleryProps> = ({ showAllPictures }) => {
     const { state, dispatch } = useContext(AppContext);
-    const [showAllPictures, setShowAllPictures] = useState(false);
+    const [fullGallery, setfullGallery] = useState(showAllPictures);
 
     const pictures = state.pictures || [];
 
     const handleLastImageOverlayClick = (e: React.MouseEvent) => {
         e.preventDefault();
         e.stopPropagation();
-        setShowAllPictures(true);
+        setfullGallery(true);
     };
 
     const handleThumbClick = (pictureID: string) => (e: React.MouseEvent) => {
@@ -131,9 +120,8 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ columns = 4 }) => {
 
     return (
         <ImageGalleryContainer
-            columns={columns}
             picturesNumber={pictures?.length}
-            showAllPictures={showAllPictures}
+            showAllPictures={fullGallery}
         >
             {pictures.slice(0, 5).map((picture: Picture, i: number) => (
                 <ImageGalleryThumb
@@ -141,7 +129,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ columns = 4 }) => {
                     onClick={handleThumbClick(picture.id)}
                 >
                     <ImagePicsum id={picture.id} author={picture.author} />
-                    {!showAllPictures && i === 4 ? (
+                    {!fullGallery && pictures[i + 1] && i === 4 ? (
                         <ThumbOverlay onClick={handleLastImageOverlayClick}>
                             <Typography color="white" size="xl">
                                 {pictures.length - 5}
@@ -159,7 +147,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ columns = 4 }) => {
                 </ImageGalleryThumb>
             ))}
 
-            {showAllPictures &&
+            {fullGallery &&
                 pictures.slice(5, pictures.length).map((picture: Picture) => (
                     <ImageGalleryThumb
                         key={picture.id}

@@ -1,4 +1,4 @@
-import { useContext, useEffect } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 import { AppContext } from '@/context/AppContext';
@@ -11,12 +11,22 @@ import { ReactComponent as Close } from '@/assets/close.svg';
 
 const ModalContainer = styled('div')`
     width: 90vw;
-    height: 90vh;
+    height: 35vh;
     position: fixed;
     background-color: #fff;
     box-shadow: 0 5px 4px rgba(1, 1, 1, 0.5);
-    padding: 26px;
+    padding: 5px;
     z-index: 20;
+
+    @media (min-width: ${({ theme }) => theme.breakpoints.xs}) {
+        width: 90vw;
+        height: 85vh;
+        position: fixed;
+        background-color: #fff;
+        box-shadow: 0 5px 4px rgb(1 1 1 / 50%);
+        padding: 10px;
+        z-index: 20;
+    }
 `;
 
 export interface CloseIcon extends React.HTMLAttributes<HTMLElement> {
@@ -28,6 +38,13 @@ const CloseIcon = styled(Close)<CloseIcon>`
     right: 6px;
     top: 6px;
     cursor: pointer;
+    z-index: 30;
+    padding: 4px;
+
+    @media (min-width: ${({ theme }) => theme.breakpoints.xs}) {
+        right: 12px;
+        top: 12px;
+    }
 `;
 
 const ImageContainer = styled('div')`
@@ -38,6 +55,8 @@ const ImageContainer = styled('div')`
 
 const Modal = () => {
     const { state, dispatch } = useContext(AppContext);
+
+    const [isOpen, setIsOpen] = useState(state.selectedPicture !== '');
 
     useEffect(() => {
         document.body.style.overflow = 'hidden';
@@ -58,6 +77,7 @@ const Modal = () => {
     }, []);
 
     const closeModal = () => {
+        setIsOpen(false);
         dispatch({
             type: ActionTypes.SelectPicture,
             payload: { selected: '' },
@@ -73,7 +93,7 @@ const Modal = () => {
         e.stopPropagation();
     };
 
-    return (
+    return isOpen ? (
         <Overlay onClick={handleClose}>
             <ModalContainer onClick={handleClickOnModal}>
                 <CloseIcon onClick={handleClose} width="16" height="16" />
@@ -82,7 +102,7 @@ const Modal = () => {
                 </ImageContainer>
             </ModalContainer>
         </Overlay>
-    );
+    ) : null;
 };
 
 export default Modal;

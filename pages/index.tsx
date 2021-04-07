@@ -63,7 +63,7 @@ export default function Home(props: HomeProps) {
                     </b>
                 </Typography>
             ) : null}
-            <ImageGallery columns={4} />
+            <ImageGallery />
             <Pagination />
             {state.selectedPicture ? <Modal /> : null}
         </DefaultPage>

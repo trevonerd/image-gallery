@@ -20,13 +20,6 @@
         "strict": true,
         "target": "esnext"
     },
-    "include": [
-        "context",
-        "hooks",
-        "pages",
-        "components",
-        "stories",
-        "assets/index.d.ts"
-    ],
+    "include": ["context", "hooks", "pages", "components", "assets/index.d.ts"],
     "exclude": ["node_modules"]
 }

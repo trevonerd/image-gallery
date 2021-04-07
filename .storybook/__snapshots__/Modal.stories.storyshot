@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Recipes/Modal Default 1`] = `
+<div
+  className="sc-3ihsg8-0 ejDfIh"
+  onClick={[Function]}
+>
+  <div
+    className="zvi78i-0 bsSaiI"
+    onClick={[Function]}
+  >
+    <svg
+      className="zvi78i-1 koUUxH"
+      height="16"
+      onClick={[Function]}
+      viewBox="0 0 329.269 329"
+      width="16"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M194.8 164.77 323.013 36.555c8.343-8.34 8.343-21.825 0-30.164-8.34-8.34-21.825-8.34-30.164 0L164.633 134.605 36.422 6.391c-8.344-8.34-21.824-8.34-30.164 0-8.344 8.34-8.344 21.824 0 30.164l128.21 128.215L6.259 292.984c-8.344 8.34-8.344 21.825 0 30.164a21.266 21.266 0 0 0 15.082 6.25c5.46 0 10.922-2.09 15.082-6.25l128.21-128.214 128.216 128.214a21.273 21.273 0 0 0 15.082 6.25c5.46 0 10.922-2.09 15.082-6.25 8.343-8.34 8.343-21.824 0-30.164zm0 0"
+      />
+    </svg>
+    <div
+      className="zvi78i-2 hkImAa"
+    >
+      <div
+        style={
+          Object {
+            "bottom": 0,
+            "boxSizing": "border-box",
+            "display": "block",
+            "left": 0,
+            "margin": 0,
+            "overflow": "hidden",
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      >
+        <noscript>
+          <img
+            decoding="async"
+            src="10"
+            srcSet="https://picsum.photos/id/10/320/188 640w, https://picsum.photos/id/10/375/221 750w, https://picsum.photos/id/10/414/244 828w, https://picsum.photos/id/10/540/318 1080w, https://picsum.photos/id/10/600/353 1200w, https://picsum.photos/id/10/960/565 1920w, https://picsum.photos/id/10/1024/602 2048w, https://picsum.photos/id/10/1920/1129 3840w"
+            style={
+              Object {
+                "border": "none",
+                "bottom": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "height": 0,
+                "left": 0,
+                "margin": "auto",
+                "maxHeight": "100%",
+                "maxWidth": "100%",
+                "minHeight": "100%",
+                "minWidth": "100%",
+                "objectFit": "cover",
+                "objectPosition": undefined,
+                "padding": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "width": 0,
+              }
+            }
+          />
+        </noscript>
+        <img
+          decoding="async"
+          src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+          style={
+            Object {
+              "border": "none",
+              "bottom": 0,
+              "boxSizing": "border-box",
+              "display": "block",
+              "height": 0,
+              "left": 0,
+              "margin": "auto",
+              "maxHeight": "100%",
+              "maxWidth": "100%",
+              "minHeight": "100%",
+              "minWidth": "100%",
+              "objectFit": "cover",
+              "objectPosition": undefined,
+              "padding": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "width": 0,
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
