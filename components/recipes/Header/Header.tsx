@@ -17,7 +17,11 @@ const Header = () => {
             <Typography as="h1" size="xl">
                 Image Gallery
             </Typography>
-            <a href="#">
+            <a
+                href="https://github.com/trevonerd/image-gallery"
+                title="go to GitHub"
+                target="_blank"
+            >
                 <GitHub width="20" height="20" />
             </a>
         </HeaderContainer>
