@@ -1,3 +1,6 @@
+[![CircleCI](https://circleci.com/gh/trevonerd/image-gallery.svg?style=svg)](https://circleci.com/gh/trevonerd/image-gallery)
+[![Heroku](https://heroku-badge.herokuapp.com/?app=lm-image-gallery)](https://lm-image-gallery.herokuapp.com)
+
 # SIMPLE IMAGE GALLERY 🌉 🏙 🌅 🏞 🌁
 
 This is a Typescript [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
