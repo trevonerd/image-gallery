@@ -1,3 +1,10 @@
+## [0.3.1](https://github.com/trevonerd/image-gallery/compare/0.3.0...0.3.1) (2021-04-07)
+
+
+### Bug Fixes
+
+* removed double lines in the README.md ([2c91024](https://github.com/trevonerd/image-gallery/commit/2c9102442cc41901859ba9bb5daa4a48c25f2120))
+
 # [0.3.0](https://github.com/trevonerd/image-gallery/compare/0.2.0...0.3.0) (2021-04-07)
 
 
