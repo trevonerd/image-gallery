@@ -1,6 +1,6 @@
 {
     "name": "image-gallery",
-    "version": "0.3.2",
+    "version": "0.3.3",
     "author": "Marco Trevisani <marco.trevisani81@gmail.com>",
     "private": true,
     "scripts": {

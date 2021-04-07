@@ -1,3 +1,10 @@
+## [0.3.3](https://github.com/trevonerd/image-gallery/compare/0.3.2...0.3.3) (2021-04-07)
+
+
+### Bug Fixes
+
+* **modal:** better close button ([c49d3a6](https://github.com/trevonerd/image-gallery/commit/c49d3a68b62379993c91b2b1bb8627255e6361af))
+
 ## [0.3.2](https://github.com/trevonerd/image-gallery/compare/0.3.1...0.3.2) (2021-04-07)
 
 
