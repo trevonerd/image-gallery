@@ -4,8 +4,6 @@ This is a Typescript [Next.js](https://nextjs.org/) project bootstrapped with [`
 
 ## Getting Started
 
----
-
 Install the npm packages:
 
 ```bash
@@ -43,8 +41,6 @@ yarn storybook
 Open [http://localhost:6006](http://localhost:6006) with your browser to see Storybook UI or visit [http://localhost:6006](http://localhost:6006) for the online version.
 
 ## Eslint & Prettier
-
----
 
 All the code is linted and prettiefied before each commit. (Thanks to [husky](https://github.com/typicode/husky) & [lint-staged](https://github.com/okonet/lint-staged))
 
@@ -93,15 +89,11 @@ the rules that will be applied:
 
 ## Commit Lint
 
----
-
 Use the [conventional commit](https://www.conventionalcommits.org/en/v1.0.0/) rules for commit messages.
 
 There is an automatic check-in the [husky](https://github.com/typicode/husky) commit-msg hook.
 
 ## Snapshot Testing
-
----
 
 Use Jest + Storyshots to create snapshots of the components using the Storybook stories directly. Is not need to create the `.test.tsx` file for each component (👍).
 
@@ -125,8 +117,6 @@ yarn update-snapshots
 
 ## Folder structure
 
----
-
 ```js
 - assets            // SVG
 - components:
@@ -144,8 +134,6 @@ yarn update-snapshots
 
 ## Styled Components
 
----
-
 Use for styling React component. Keep writing CSS with the power of JS.
 
 Pro:
@@ -162,8 +150,6 @@ Pro:
 
 ## CSS Grid
 
----
-
 To make the image gallery responsive.
 
 Depending on the screen resolution:
@@ -178,8 +164,6 @@ Depending on the screen resolution:
 
 ## Context
 
----
-
 To avoid prop drilling, the App has a state and is passed in the React Context. The state is very simple, so Redux is a bit too much.
 
 ```js
@@ -191,8 +175,6 @@ const initialState = {
 ```
 
 ## Hooks 🪝
-
----
 
 -   ## useReducer
 
@@ -209,8 +191,6 @@ const initialState = {
     It uses [swr](https://github.com/vercel/swr) to cache and optimizes the fetch of data.
 
 ## Release
-
----
 
 To release a new version:
 
