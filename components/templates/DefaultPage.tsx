@@ -1,10 +1,12 @@
 import Head from 'next/head';
 import styled from 'styled-components';
+import { Typography } from '../ingredients/Typography';
 
 const MainContainer = styled('div')`
     ${({ theme }) => `
     padding: 8px;
     margin: 0 auto;
+    min-height: calc(100vh - 95px);
 
     @media (min-width: ${theme.breakpoints.md}px) {
         max-width: ${theme.breakpoints.md}px;
@@ -22,6 +24,13 @@ const MainContainer = styled('div')`
 `}
 `;
 
+const Footer = styled('footer')`
+    ${({ theme }) => `
+    padding: 6px;
+    border-top: 1px solid ${theme.colors.primary};
+    text-align: center;
+`}
+`;
 export interface PageProps {
     children: React.ReactNode;
     title?: string;
@@ -37,9 +46,17 @@ const DefaultPage: React.FC<PageProps> = ({ children, title = 'LM TEST' }) => {
 
             <MainContainer>{children}</MainContainer>
 
-            <footer>
-                <span>Made by @trevonerd</span>
-            </footer>
+            <Footer>
+                <span>
+                    <Typography size="xs">
+                        © Copyright 2020{' '}
+                        <a href="mailto:marco.trevisani81@gmail.com">
+                            Marco Trevisani
+                        </a>
+                        . Handcrafted in Bologna.
+                    </Typography>
+                </span>
+            </Footer>
         </div>
     );
 };

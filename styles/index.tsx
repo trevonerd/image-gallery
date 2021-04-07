@@ -14,6 +14,10 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Roboto', Arial, san-serif;
     padding: 0;
   }
+
+  a {
+    color: ${colors.primary};  
+  }
 `;
 
 export const theme = {
