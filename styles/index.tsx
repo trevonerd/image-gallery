@@ -7,11 +7,12 @@ import { fontSizes } from './_typography';
 
 export const GlobalStyle = createGlobalStyle`
   ${normalize}
- 
+
   body {
-    padding: 0;
     background-color: ${colors.white};
     color: ${colors.primary};
+    font-family: 'Roboto', Arial, san-serif;
+    padding: 0;
   }
 `;
 

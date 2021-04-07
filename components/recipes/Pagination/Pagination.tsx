@@ -36,7 +36,7 @@ const Pagination = () => {
                 Previous Page
             </Button>
             <CurrentPage>
-                <Typography size="lg">PAGE {state.currentPage}</Typography>
+                <Typography size="sm">PAGE {state.currentPage}</Typography>
             </CurrentPage>
             <Button
                 onClick={() => {

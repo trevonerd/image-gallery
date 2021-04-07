@@ -13,6 +13,8 @@ const ButtonPrimary = styled('button')<ButtonProps>`
         border: 1px solid ${theme.colors.primary};
         padding: 6px 18px;
         border-radius: 4px;
+        font-size: ${theme.fontSizes.sm};
+        line-height: normal;
 
         &:hover {
             color: ${theme.colors.white};

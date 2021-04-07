@@ -2,7 +2,7 @@
 
 exports[`Storyshots Ingredients/Button Disabled 1`] = `
 <button
-  className="sc-1rup0b6-0 WozPk"
+  className="sc-1rup0b6-0 kapsQV"
   disabled={true}
 >
   Button Disabled
@@ -11,7 +11,7 @@ exports[`Storyshots Ingredients/Button Disabled 1`] = `
 
 exports[`Storyshots Ingredients/Button Primary 1`] = `
 <button
-  className="sc-1rup0b6-0 WozPk"
+  className="sc-1rup0b6-0 kapsQV"
   disabled={false}
 >
   Button
