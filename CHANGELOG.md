@@ -1,3 +1,10 @@
+## [0.3.2](https://github.com/trevonerd/image-gallery/compare/0.3.1...0.3.2) (2021-04-07)
+
+
+### Bug Fixes
+
+* **components:** fixed Modal on mobile, fixed ImageGallery grid rows ([ce84195](https://github.com/trevonerd/image-gallery/commit/ce84195489ad06d84f61c42a526a89d418bece96))
+
 ## [0.3.1](https://github.com/trevonerd/image-gallery/compare/0.3.0...0.3.1) (2021-04-07)
 
 
