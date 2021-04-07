@@ -38,7 +38,7 @@ Run Storybook dev server:
 yarn storybook
 ```
 
-Open [http://localhost:6006](http://localhost:6006) with your browser to see Storybook UI or visit [http://localhost:6006](http://localhost:6006) for the online version.
+Open [http://localhost:6006](http://localhost:6006) with your browser to see the Storybook UI.
 
 ## Eslint & Prettier
 
@@ -202,4 +202,4 @@ yarn release
 
 -   See a [LIVE DEMO](https://lm-image-gallery.herokuapp.com).
 -   See [CHANGELOG.md](CHANGELOG.md) for major/breaking updates.
--   Visit [Storybook page](URL) to list the components used in this project.
+-   Visit [this Storybook page](https://storybook-lm-image-gallery.netlify.app/) to see the components used in this project.
