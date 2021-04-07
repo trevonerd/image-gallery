@@ -27,26 +27,14 @@ const ImageGalleryThumb = styled('div')`
 const ImageGalleryContainer = styled('div')<ImageGalleryContainerProps>`
     ${({ columns, picturesNumber, showAllPictures, theme }) => `
     display: grid;
-    grid-template-columns: repeat(${columns}, 1fr);
-    grid-template-rows: repeat(${
-        showAllPictures
-            ? columns
-                ? Math.round(picturesNumber / columns + 1)
-                : 0
-            : 2
-    },
-        12vw
-    );
     grid-gap: 15px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(${
+        showAllPictures ? Math.round(picturesNumber) : 5
+    },
+        40vw
+    );
 
-    @media (max-width: ${theme.breakpoints.sm}px) {
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(${
-            showAllPictures ? Math.round(picturesNumber) : 5
-        },
-            40vw
-        );
-    }
 
     @media (min-width: ${theme.breakpoints.sm + 1}px) and (max-width: ${
         theme.breakpoints.md
@@ -64,6 +52,20 @@ const ImageGalleryContainer = styled('div')<ImageGalleryContainerProps>`
             28vw
         );
     }
+
+    @media (min-width: ${theme.breakpoints.md + 1}px) {
+        grid-template-columns: repeat(${columns}, 1fr);
+        grid-template-rows: repeat(${
+            showAllPictures
+                ? columns
+                    ? Math.round(picturesNumber / columns + 1)
+                    : 0
+                : 2
+        },
+            12vw
+        );
+    }
+
 
     @media (min-width: ${theme.breakpoints.sm + 1}px) {
         ${ImageGalleryThumb}:nth-child(1) {
