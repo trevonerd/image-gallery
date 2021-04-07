@@ -1,3 +1,10 @@
+# [0.3.0](https://github.com/trevonerd/image-gallery/compare/0.2.0...0.3.0) (2021-04-07)
+
+
+### Features
+
+* added README.md ([5ad3dfd](https://github.com/trevonerd/image-gallery/commit/5ad3dfde6c943432e0c7da5ee9b6776e7e5e81e4))
+
 # 0.2.0 (2021-04-07)
 
 
