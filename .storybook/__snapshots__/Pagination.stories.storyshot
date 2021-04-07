@@ -2,7 +2,7 @@
 
 exports[`Storyshots Recipes/Pagination First Page 1`] = `
 <div
-  className="sc-18p7qsi-0 iTHwfZ"
+  className="sc-18p7qsi-0 bXTbTd"
 >
   <button
     className="sc-1rup0b6-0 kapsQV"
@@ -34,7 +34,7 @@ exports[`Storyshots Recipes/Pagination First Page 1`] = `
 
 exports[`Storyshots Recipes/Pagination Other Pages 1`] = `
 <div
-  className="sc-18p7qsi-0 iTHwfZ"
+  className="sc-18p7qsi-0 bXTbTd"
 >
   <button
     className="sc-1rup0b6-0 kapsQV"

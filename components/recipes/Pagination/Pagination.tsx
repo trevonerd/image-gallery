@@ -11,7 +11,6 @@ import { ActionTypes } from '@/context/galleryReducer';
 const PaginationContainer = styled('div')`
     display: flex;
     justify-content: space-between;
-    aign-items: center;
     margin-top: 24px;
 `;
 
