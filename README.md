@@ -1,36 +1,225 @@
-[![CircleCI](https://circleci.com/gh/trevonerd/image-gallery.svg?style=svg)](https://circleci.com/gh/trevonerd/image-gallery)
+# SIMPLE IMAGE GALLERY 🌉 🏙 🌅 🏞 🌁
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a Typescript [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
-First, run the development server:
+---
+
+Install the npm packages:
 
 ```bash
-npm run dev
-# or
+yarn install
+```
+
+Run the development server:
+
+```bash
 yarn dev
+```
+
+Alternatively, run the optimized production build:
+
+```bash
+yarn build
+
+yarn start
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+# Project Details
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Storybook
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Use Storybook to build React components in isolation.
 
-## Learn More
+Run Storybook dev server:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+yarn storybook
+```
 
--   [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
--   [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Open [http://localhost:6006](http://localhost:6006) with your browser to see Storybook UI or visit [http://localhost:6006](http://localhost:6006) for the online version.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Eslint & Prettier
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+All the code is linted and prettiefied before each commit. (Thanks to [husky](https://github.com/typicode/husky) & [lint-staged](https://github.com/okonet/lint-staged))
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+To check lint:
+
+```bash
+yarn lint
+```
+
+To fix errors:
+
+```bash
+yarn lint:fix
+```
+
+To prettify the code:
+
+```bash
+yarn prettier
+```
+
+the rules that will be applied:
+
+```JSON
+{
+    "arrowParens": "avoid",
+    "bracketSpacing": true,
+    "endOfLine": "lf",
+    "htmlWhitespaceSensitivity": "css",
+    "insertPragma": false,
+    "jsxBracketSameLine": false,
+    "jsxSingleQuote": false,
+    "printWidth": 80,
+    "proseWrap": "preserve",
+    "quoteProps": "as-needed",
+    "requirePragma": false,
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 4,
+    "trailingComma": "es5",
+    "useTabs": false,
+    "vueIndentScriptAndStyle": false,
+    "embeddedLanguageFormatting": "auto"
+}
+```
+
+## Commit Lint
+
+---
+
+Use the [conventional commit](https://www.conventionalcommits.org/en/v1.0.0/) rules for commit messages.
+
+There is an automatic check-in the [husky](https://github.com/typicode/husky) commit-msg hook.
+
+## Snapshot Testing
+
+---
+
+Use Jest + Storyshots to create snapshots of the components using the Storybook stories directly. Is not need to create the `.test.tsx` file for each component (👍).
+
+Run snapshot tests:
+
+```bash
+yarn test
+```
+
+Run interactive snapshot tests:
+
+```bash
+yarn test --watchAll
+```
+
+Update snapshots files:
+
+```bash
+yarn update-snapshots
+```
+
+## Folder structure
+
+---
+
+```js
+- assets            // SVG
+- components:
+    - ingredients   // UI basic components
+    - recipes       // More complex components based on ingredients.
+    - templates     // Page templates
+- context           // App state.
+- hooks             // Custom React Hooks
+- pages             // Next.JS default folder for the page components.
+- public            // Next.JS default folder for public files like favico, manifest.json...
+- stories           // Storybook stories
+- styles            // Theme (global style, breakpoints, colors, typography)
+- types             // Typescript global types
+```
+
+## Styled Components
+
+---
+
+Use for styling React component. Keep writing CSS with the power of JS.
+
+Pro:
+
+-   classes are unique.
+
+    _In development, the class names are more readable for a better debug._
+
+-   critical CSS. Styled-Components appends only the needed style.
+
+-   easy dynamic styling based on props or theme.
+
+-   SSR support with custom `_document` page.
+
+## CSS Grid
+
+---
+
+To make the image gallery responsive.
+
+Depending on the screen resolution:
+
+```js
+1 column grid (screen-width <= 600)
+
+2 columns grid (600 < screen-width <= 960)
+
+4 columns grid (screen-width > 960)
+```
+
+## Context
+
+---
+
+To avoid prop drilling, the App has a state and is passed in the React Context. The state is very simple, so Redux is a bit too much.
+
+```js
+const initialState = {
+    pictures: [], // Array of picture to show
+    selectedPicture: '', // Selected picture to open in the Modal
+    currentPage: 1, // Current gallery page
+};
+```
+
+## Hooks 🪝
+
+---
+
+-   ## useReducer
+
+    To update the app state. The dispatch function is passed in the context, so it is possible to dispatch an action everywhere in the components tree.
+
+-   ## useContext
+
+    To retrieve the App Context value.
+
+-   ## usePictures
+
+    Custom hook to retrieve the gallery images from [Lorem Picsum](https://picsum.photos) with pagination support.
+
+    It uses [swr](https://github.com/vercel/swr) to cache and optimizes the fetch of data.
+
+## Release
+
+---
+
+To release a new version:
+
+```bash
+yarn release
+```
+
+# Links
+
+-   See a [LIVE DEMO](https://lm-image-gallery.herokuapp.com).
+-   See [CHANGELOG.md](CHANGELOG.md) for major/breaking updates.
+-   Visit [Storybook page](URL) to list the components used in this project.
