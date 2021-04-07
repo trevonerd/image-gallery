@@ -18,7 +18,7 @@ const ModalContainer = styled('div')`
     padding: 5px;
     z-index: 20;
 
-    @media (min-width: ${({ theme }) => theme.breakpoints.xs}) {
+    @media (min-width: ${({ theme }) => theme.breakpoints.sm}px) {
         width: 90vw;
         height: 85vh;
         position: fixed;
@@ -35,15 +35,17 @@ export interface CloseIcon extends React.HTMLAttributes<HTMLElement> {
 
 const CloseIcon = styled(Close)<CloseIcon>`
     position: absolute;
-    right: 6px;
-    top: 6px;
+    right: 0;
+    top: 0;
     cursor: pointer;
     z-index: 30;
     padding: 4px;
+    background-color: ${({ theme }) => theme.colors.white};
+    border-bottom-left-radius: 5px;
 
-    @media (min-width: ${({ theme }) => theme.breakpoints.xs}) {
-        right: 12px;
-        top: 12px;
+    @media (min-width: ${({ theme }) => theme.breakpoints.sm}px) {
+        right: 3px;
+        top: 3px;
     }
 `;
 

@@ -6,11 +6,11 @@ exports[`Storyshots Recipes/Modal Default 1`] = `
   onClick={[Function]}
 >
   <div
-    className="zvi78i-0 bsSaiI"
+    className="zvi78i-0 ibtaBq"
     onClick={[Function]}
   >
     <svg
-      className="zvi78i-1 koUUxH"
+      className="zvi78i-1 fhPtvv"
       height="16"
       onClick={[Function]}
       viewBox="0 0 329.269 329"
