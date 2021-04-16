@@ -24,76 +24,8 @@ exports[`Storyshots Recipes/Modal Default 1`] = `
     <div
       className="zvi78i-2 hkImAa"
     >
-      <div
-        style={
-          Object {
-            "bottom": 0,
-            "boxSizing": "border-box",
-            "display": "block",
-            "left": 0,
-            "margin": 0,
-            "overflow": "hidden",
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
-        }
-      >
-        <noscript>
-          <img
-            decoding="async"
-            src="10"
-            srcSet="https://picsum.photos/id/10/320/188 640w, https://picsum.photos/id/10/375/221 750w, https://picsum.photos/id/10/414/244 828w, https://picsum.photos/id/10/540/318 1080w, https://picsum.photos/id/10/600/353 1200w, https://picsum.photos/id/10/960/565 1920w, https://picsum.photos/id/10/1024/602 2048w, https://picsum.photos/id/10/1920/1129 3840w"
-            style={
-              Object {
-                "border": "none",
-                "bottom": 0,
-                "boxSizing": "border-box",
-                "display": "block",
-                "height": 0,
-                "left": 0,
-                "margin": "auto",
-                "maxHeight": "100%",
-                "maxWidth": "100%",
-                "minHeight": "100%",
-                "minWidth": "100%",
-                "objectFit": "cover",
-                "objectPosition": undefined,
-                "padding": 0,
-                "position": "absolute",
-                "right": 0,
-                "top": 0,
-                "width": 0,
-              }
-            }
-          />
-        </noscript>
-        <img
-          decoding="async"
-          src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-          style={
-            Object {
-              "border": "none",
-              "bottom": 0,
-              "boxSizing": "border-box",
-              "display": "block",
-              "height": 0,
-              "left": 0,
-              "margin": "auto",
-              "maxHeight": "100%",
-              "maxWidth": "100%",
-              "minHeight": "100%",
-              "minWidth": "100%",
-              "objectFit": "cover",
-              "objectPosition": undefined,
-              "padding": 0,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-              "width": 0,
-            }
-          }
-        />
+      <div>
+        CHILDREN
       </div>
     </div>
   </div>

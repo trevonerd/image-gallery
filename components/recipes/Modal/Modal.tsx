@@ -1,11 +1,7 @@
-import { useContext, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
-import { AppContext } from '@/context/AppContext';
-import { ActionTypes } from '@/context/galleryReducer';
-
 import { Overlay } from '@/components/ingredients/Overlay';
-import { ImagePicsum } from '@/components/ingredients/ImagePicsum';
 
 import { ReactComponent as Close } from '@/assets/close.svg';
 
@@ -49,26 +45,42 @@ const CloseIcon = styled(Close)<CloseIcon>`
     }
 `;
 
-const ImageContainer = styled('div')`
+const MainContainer = styled('div')`
     width: 100%;
     height: 100%;
     position: relative;
 `;
 
-const Modal = () => {
-    const { state, dispatch } = useContext(AppContext);
+export interface ModalProps {
+    children: React.ReactNode;
+    open: boolean;
+    onClose?: Function;
+}
 
-    const [isOpen, setIsOpen] = useState(state.selectedPicture !== '');
+const Modal: React.FC<ModalProps> = ({
+    open,
+    onClose,
+    children,
+}: ModalProps) => {
+    const [isOpen, setIsOpen] = useState(open);
 
     useEffect(() => {
+        setIsOpen(open);
+    }, [open]);
+
+    useEffect(() => {
+        if (!open) return;
+
         document.body.style.overflow = 'hidden';
 
         return () => {
             document.body.style.overflow = 'unset';
         };
-    }, []);
+    }, [open]);
 
     useEffect(() => {
+        if (!open) return;
+
         const close = (e: KeyboardEvent) => {
             if (e.code === 'Escape') {
                 closeModal();
@@ -76,14 +88,11 @@ const Modal = () => {
         };
         window.addEventListener('keydown', close);
         return () => window.removeEventListener('keydown', close);
-    }, []);
+    }, [open]);
 
     const closeModal = () => {
         setIsOpen(false);
-        dispatch({
-            type: ActionTypes.SelectPicture,
-            payload: { selected: '' },
-        });
+        onClose && onClose();
     };
 
     const handleClose = (e: React.MouseEvent) => {
@@ -99,9 +108,7 @@ const Modal = () => {
         <Overlay onClick={handleClose}>
             <ModalContainer onClick={handleClickOnModal}>
                 <CloseIcon onClick={handleClose} width="16" height="16" />
-                <ImageContainer>
-                    <ImagePicsum id={state.selectedPicture} />
-                </ImageContainer>
+                <MainContainer>{children}</MainContainer>
             </ModalContainer>
         </Overlay>
     ) : null;

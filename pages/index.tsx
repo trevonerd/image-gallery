@@ -5,8 +5,9 @@ import { DefaultPage } from '@/components/templates';
 import { Typography } from '@/components/ingredients/Typography';
 
 import { Header } from '@/components/recipes/Header';
-import { LoaderFullPage } from '@/components/recipes/LoaderFullPage';
 import { ImageGallery } from '@/components/recipes/ImageGallery';
+import { ImagePicsum } from '@/components/ingredients/ImagePicsum';
+import { LoaderFullPage } from '@/components/recipes/LoaderFullPage';
 import { Modal } from '@/components/recipes/Modal';
 import { Pagination } from '@/components/recipes/Pagination';
 
@@ -51,6 +52,13 @@ export default function Home(props: HomeProps) {
             });
     }, [pictures]);
 
+    const onCloseModal = () => {
+        dispatch({
+            type: ActionTypes.SelectPicture,
+            payload: { selected: '' },
+        });
+    };
+
     return (
         <DefaultPage title="LM Image Gallery | Marco Trevisani">
             <Header />
@@ -65,7 +73,9 @@ export default function Home(props: HomeProps) {
             ) : null}
             <ImageGallery />
             <Pagination />
-            {state.selectedPicture ? <Modal /> : null}
+            <Modal open={state.selectedPicture !== ''} onClose={onCloseModal}>
+                <ImagePicsum id={state.selectedPicture} />
+            </Modal>
         </DefaultPage>
     );
 }
